@@ -28,11 +28,13 @@ import tensorflow as tf
 # image size of 32 x 32. If one alters this number, then the entire model
 # architecture will change and any model would need to be retrained.
 IMAGE_SIZE = 24
+# IMAGE_HEIGHT = 40
+# IMAGE_WIDTH = 32
 
 # Global constants describing the CIFAR-10 data set.
 NUM_CLASSES = 10
-NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN = 50000
-NUM_EXAMPLES_PER_EPOCH_FOR_EVAL = 10000
+NUM_EXAMPLES_PER_EPOCH_FOR_TRAIN = 1532
+NUM_EXAMPLES_PER_EPOCH_FOR_EVAL = 382
 
 
 def read_cifar10(filename_queue):
@@ -65,7 +67,7 @@ def read_cifar10(filename_queue):
   # See http://www.cs.toronto.edu/~kriz/cifar.html for a description of the
   # input format.
   label_bytes = 1  # 2 for CIFAR-100
-  result.height = 32
+  result.height = 40
   result.width = 32
   result.depth = 3
   image_bytes = result.height * result.width * result.depth
