@@ -9,7 +9,7 @@ import glob
 from operator import itemgetter
 
 # Import JSON data
-with open('10k/top_brands_products.json') as inputData:
+with open('10k/products.json') as inputData:
     jsonData = json.load(inputData)
 
 # Number of products
@@ -68,5 +68,5 @@ def rawBrandList(minRank):
 print('Product Count: ' + str(productCount))
 print('Image Count: ' + str(imageCount))
 print('Unique Brands Count: ' + str(len(uniqueBrands)))
-printTopBrands(10)
+printTopBrands(30)
 # print(json.dumps(rawBrandList(10)))
